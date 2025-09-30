@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand colors */
+    --onyx: #0a0a0a;
+    --gold: #c4a24c;
+    --fog: #f5f5f4;
+    --ink: #111111;
+    --slate: #6b7280;
+
+    /* shadcn/ui tokens */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+    --primary: 0 0% 4%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 7%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 42%;
+    --accent: 40 42% 54%;
+    --accent-foreground: 0 0% 7%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 40 42% 54%;
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-fog text-ink font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif text-ink;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .grain-overlay {
+    position: relative;
+  }
+
+  .grain-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2;
+  }
+
+  .link-gold {
+    @apply text-ink hover:text-gold transition-colors duration-200;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center rounded-md border border-gold bg-transparent px-6 py-3 text-sm font-medium text-ink transition-all duration-200 hover:bg-gold hover:text-white focus-ring;
+  }
+
+  .btn-gold-filled {
+    @apply inline-flex items-center justify-center rounded-md border border-gold bg-gold px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:bg-transparent hover:text-ink focus-ring;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* MDX Styling */
+.mdx-content {
+  @apply max-w-none text-slate leading-relaxed;
+}
+
+.mdx-content h1 {
+  @apply mt-8 mb-4 font-serif text-4xl font-bold text-ink scroll-mt-20;
+}
+
+.mdx-content h2 {
+  @apply mt-8 mb-4 font-serif text-3xl font-bold text-ink scroll-mt-20;
+}
+
+.mdx-content h3 {
+  @apply mt-6 mb-3 font-serif text-2xl font-semibold text-ink scroll-mt-20;
+}
+
+.mdx-content p {
+  @apply mb-4;
+}
+
+.mdx-content ul,
+.mdx-content ol {
+  @apply mb-4 ml-6;
+}
+
+.mdx-content ul {
+  @apply list-disc;
+}
+
+.mdx-content ol {
+  @apply list-decimal;
+}
+
+.mdx-content li {
+  @apply mb-2;
+}
+
+.mdx-content a {
+  @apply text-gold hover:underline;
+}
+
+.mdx-content code {
+  @apply rounded bg-neutral-100 px-1.5 py-0.5 text-sm font-mono;
+}
+
+.mdx-content pre {
+  @apply overflow-x-auto rounded-lg bg-neutral-900 p-4 mb-4;
+}
+
+.mdx-content pre code {
+  @apply bg-transparent p-0 text-neutral-100;
+}
+
+.mdx-content blockquote {
+  @apply border-l-4 border-gold pl-4 italic text-neutral-600 my-4;
+}
+
+.mdx-content strong {
+  @apply font-semibold text-ink;
+}
+
+.mdx-content hr {
+  @apply my-8 border-neutral-200;
+}
+
+/* Loading skeleton */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    to right,
+    #f5f5f4 0%,
+    #e7e5e4 20%,
+    #f5f5f4 40%,
+    #f5f5f4 100%
+  );
+  background-size: 1000px 100%;
+}

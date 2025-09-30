@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /(marketing)/owner-portal
+
+# Host
+Host: https://onyxyachtmanagement.com
+
+# Sitemaps
+Sitemap: https://onyxyachtmanagement.com/sitemap.xml
