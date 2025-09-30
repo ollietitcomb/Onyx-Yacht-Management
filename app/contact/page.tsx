@@ -98,8 +98,16 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div>
-              <ContactFormStatic />
+            <div className="rounded-2xl border border-neutral-200 bg-white p-8 shadow-lg">
+              <h2 className="font-serif text-2xl font-bold text-ink">
+                Send us a message
+              </h2>
+              <p className="mt-2 text-sm text-slate">
+                Fill out the form below and we'll get back to you shortly.
+              </p>
+              <div className="mt-6">
+                <ContactForm />
+              </div>
             </div>
           </div>
         </div>
