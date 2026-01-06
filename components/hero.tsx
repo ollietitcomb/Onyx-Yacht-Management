@@ -32,8 +32,10 @@ export function Hero({
           className="object-cover"
           priority
           quality={90}
+          style={{ filter: 'brightness(0.4)' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-onyx/95 via-onyx/85 to-onyx/75"></div>
+        <div className="absolute inset-0 bg-onyx/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-onyx/99 via-onyx/98 to-onyx/95"></div>
       </div>
 
       {/* Content */}
