@@ -3,12 +3,10 @@
 export function LogosMarquee() {
   // Placeholder for marina/partner logos
   const partners = [
-    'Ocean Village Marina',
-    'Port Hamble',
-    'Camper & Nicholsons',
+    'Agapi Boating',
+    'Premier Marinas',
     'Pinmar',
-    'MCA',
-    'Surveyors International',
+    'Awk Marine',
   ];
 
   return (

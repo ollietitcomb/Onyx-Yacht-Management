@@ -5,27 +5,27 @@ import { motion } from 'framer-motion';
 const steps = [
   {
     number: '01',
-    title: 'Discover',
+    title: 'Understand',
     description:
-      'Initial consultation, vessel audit, and needs assessment. We understand your goals and current state.',
+      'We take the time to understand your yacht, how you use it, and what matters most to you. This includes a practical review of the vessel, its systems, documentation, and any immediate issues.',
   },
   {
     number: '02',
-    title: 'Stabilise',
+    title: 'Secure',
     description:
-      'Address critical compliance, safety, and operational gaps. Establish baseline standards and protocols.',
+      'We bring the yacht up to standard by addressing compliance, safety, maintenance, and operational gaps. Required repairs, servicing, and system improvements are identified and managed to ensure the yacht is sound and properly set up.',
   },
   {
     number: '03',
-    title: 'Optimise',
+    title: 'Improve',
     description:
-      'Implement efficient systems, refine crew operations, and negotiate better supplier terms.',
+      'With the basics covered, we look at ways to make ownership simpler and more efficient. This may include improving maintenance planning, reducing avoidable costs, and refining how the yacht is operated day to day.',
   },
   {
     number: '04',
-    title: 'Care',
+    title: 'Manage',
     description:
-      'Ongoing management, transparent reporting, and proactive maintenance. Your vessel, perfected.',
+      'Ongoing support with clear communication, regular check-ins, and proactive maintenance oversight. Your yacht stays compliant, well maintained, and ready to enjoy, without unnecessary complexity or owner stress.',
   },
 ];
 

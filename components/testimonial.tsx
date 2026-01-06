@@ -53,7 +53,7 @@ export function TestimonialSection() {
           <Testimonial
             quote="I was spending every weekend dealing with maintenance issues. Onyx took it all off my plate—now I actually enjoy using the boat."
             author="Private Owner"
-            vesselSize="Sunseeker Predator 57"
+            vesselSize="Fairline Targa 39"
           />
           <Testimonial
             quote="The monthly retainer is a fraction of what I was wasting on reactive maintenance and last-minute yard fees. Best decision I made."

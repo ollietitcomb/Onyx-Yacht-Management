@@ -1,0 +1,52 @@
+EMAIL SIGNATURE SETUP INSTRUCTIONS
+====================================
+
+For Oliver Titcomb - Onyx Yacht Management
+
+OPTION 1: HTML Signature (Recommended)
+--------------------------------------
+1. Open the file: email-signature.html
+2. Copy all the content from the <div class="signature"> section
+3. Paste into your email client's signature settings:
+   
+   - Gmail: Settings > General > Signature > Create new
+   - Outlook: File > Options > Mail > Signatures
+   - Apple Mail: Mail > Preferences > Signatures
+   - Other clients: Look for "Signature" in settings
+
+OPTION 2: Plain Text Version
+-----------------------------
+Oliver Titcomb
+Yacht Management Specialist
+Onyx Yacht Management
+
+Phone: +44 (0) 7950 228858
+Email: oliver@onyxyachtmanagement.com
+Web: onyxyachtmanagement.com
+Location: South Coast, United Kingdom
+
+ONYX
+Discreet, full-scope yacht management across the UK and the Mediterranean
+
+OPTION 3: Rich Text Formatting
+-------------------------------
+If your email client doesn't support HTML, you can manually format:
+
+Oliver Titcomb
+Yacht Management Specialist
+Onyx Yacht Management
+
+Phone: +44 (0) 7950 228858
+Email: oliver@onyxyachtmanagement.com
+Web: onyxyachtmanagement.com
+Location: South Coast, United Kingdom
+
+ONYX
+Discreet, full-scope yacht management across the UK and the Mediterranean
+
+NOTES:
+- The HTML version includes proper styling with Montserrat font and brand colors
+- Make sure to test the signature in your email client before using
+- Some email clients may strip certain HTML/CSS, so test formatting
+- The phone number and email are clickable links in the HTML version
+

@@ -17,7 +17,8 @@ const tiers = [
       'Antifouling & winterisation',
       'Safety equipment compliance',
       'Insurance liaison',
-      'Quarterly check-ins',
+      'Monthly visits',
+      'Quarterly reports',
     ],
   },
   {

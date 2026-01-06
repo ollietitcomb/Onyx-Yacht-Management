@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 const stats = [
-  { value: 32, label: 'Vessels Under Management', suffix: '+' },
-  { value: 45, label: 'Average Vessel Size (ft)', suffix: '' },
+  { value: 11, label: 'Vessels Under Management', suffix: '+' },
+  { value: 40, label: 'Average Vessel Size (ft)', suffix: '' },
   { value: 2, label: 'Average Response Time', suffix: 'h' },
   { value: 98, label: 'Client Retention Rate', suffix: '%' },
 ];
