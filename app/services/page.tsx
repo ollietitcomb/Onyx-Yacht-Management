@@ -91,7 +91,7 @@ export default function ServicesPage() {
       <section className="section-padding bg-onyx grain-overlay">
         <div className="container-custom relative z-10">
           <div className="max-w-3xl">
-            <h1 className="font-serif text-5xl font-bold text-white sm:text-6xl">
+            <h1 className="font-sans text-5xl font-bold text-white sm:text-6xl">
               Full-Scope Yacht Management
             </h1>
             <p className="mt-6 text-lg text-neutral-200">
@@ -117,7 +117,7 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className="section-padding bg-white">
         <div className="container-custom text-center">
-          <h2 className="font-serif text-4xl font-bold text-ink">
+          <h2 className="font-sans text-4xl font-bold text-ink">
             Not sure which services you need?
           </h2>
           <p className="mt-4 text-lg text-slate">

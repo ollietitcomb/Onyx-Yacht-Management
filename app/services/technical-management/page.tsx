@@ -49,7 +49,7 @@ export default function TechnicalManagementPage() {
             <div className="rounded-lg bg-gold/20 p-3">
               <Wrench className="h-8 w-8 text-gold" />
             </div>
-            <h1 className="font-serif text-5xl font-bold text-white sm:text-6xl">
+            <h1 className="font-sans text-5xl font-bold text-white sm:text-6xl">
               Technical Management
             </h1>
           </div>
@@ -64,7 +64,7 @@ export default function TechnicalManagementPage() {
         <div className="container-custom">
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
-              <h2 className="font-serif text-3xl font-bold text-ink">
+              <h2 className="font-sans text-3xl font-bold text-ink">
                 What's Included
               </h2>
               <ul className="mt-8 space-y-4">
@@ -78,7 +78,7 @@ export default function TechnicalManagementPage() {
             </div>
 
             <div>
-              <h2 className="font-serif text-3xl font-bold text-ink">
+              <h2 className="font-sans text-3xl font-bold text-ink">
                 Our Process
               </h2>
               <div className="mt-8 space-y-6">

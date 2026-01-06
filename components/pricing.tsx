@@ -53,10 +53,10 @@ const tiers = [
 
 export function Pricing() {
   return (
-    <section className="section-padding bg-fog">
+    <section id="pricing" className="section-padding bg-fog">
       <div className="container-custom">
         <div className="text-center">
-          <h2 className="font-serif text-4xl font-bold text-ink sm:text-5xl">
+          <h2 className="font-sans text-4xl font-bold text-ink sm:text-5xl">
             Transparent Retainers
           </h2>
           <p className="mt-4 text-lg text-slate">
@@ -83,7 +83,7 @@ export function Pricing() {
                 <CardHeader>
                   <CardTitle className="text-2xl">{tier.name}</CardTitle>
                   <div className="mt-4">
-                    <span className="font-serif text-4xl font-bold text-gold">
+                    <span className="font-sans text-4xl font-bold text-gold">
                       {tier.price}
                     </span>
                     <span className="text-slate">{tier.period}</span>

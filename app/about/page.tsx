@@ -58,7 +58,7 @@ export default function AboutPage() {
     <>
       <section className="section-padding bg-onyx grain-overlay">
         <div className="container-custom relative z-10">
-        <h1 className="font-serif text-5xl font-bold text-white sm:text-6xl">
+        <h1 className="font-sans text-5xl font-bold text-white sm:text-6xl">
           Built for UK coastal owners.
           <br />No superyacht overheads.
         </h1>
@@ -74,7 +74,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
-              <h2 className="font-serif text-4xl font-bold text-ink">
+              <h2 className="font-sans text-4xl font-bold text-ink">
                 Our Story
               </h2>
               <div className="mt-6 space-y-4 text-slate">
@@ -97,7 +97,7 @@ export default function AboutPage() {
             </div>
 
             <div>
-              <h2 className="font-serif text-4xl font-bold text-ink">
+              <h2 className="font-sans text-4xl font-bold text-ink">
                 Our Approach
               </h2>
               <div className="mt-6 space-y-6">
@@ -123,7 +123,7 @@ export default function AboutPage() {
       <section className="section-padding bg-fog">
         <div className="container-custom">
           <div className="text-center">
-            <h2 className="font-serif text-4xl font-bold text-ink">
+            <h2 className="font-sans text-4xl font-bold text-ink">
               Leadership Team
             </h2>
             <p className="mt-4 text-slate">
@@ -138,7 +138,7 @@ export default function AboutPage() {
                   <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gold/10">
                     <Users2 className="h-12 w-12 text-gold" />
                   </div>
-                  <h3 className="font-serif text-xl font-semibold text-ink">
+                  <h3 className="font-sans text-xl font-semibold text-ink">
                     {member.name}
                   </h3>
                   <p className="mt-1 text-sm font-medium text-gold">
@@ -159,7 +159,7 @@ export default function AboutPage() {
           <Card className="border-gold/20">
             <CardContent className="p-8 text-center lg:p-12">
               <MapPin className="mx-auto h-12 w-12 text-gold" />
-              <h2 className="mt-6 font-serif text-3xl font-bold text-ink">
+              <h2 className="mt-6 font-sans text-3xl font-bold text-ink">
                 Coverage
               </h2>
               <p className="mt-4 text-lg text-slate">

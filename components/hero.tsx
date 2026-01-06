@@ -33,7 +33,7 @@ export function Hero({
           priority
           quality={90}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-onyx/90 via-onyx/70 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-onyx/95 via-onyx/85 to-onyx/75"></div>
       </div>
 
       {/* Content */}
@@ -43,7 +43,7 @@ export function Hero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="font-serif text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl"
+            className="font-sans text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl"
           >
             {headline}
           </motion.h1>

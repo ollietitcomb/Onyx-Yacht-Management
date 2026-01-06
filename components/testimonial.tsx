@@ -21,7 +21,7 @@ export function Testimonial({ quote, author, vesselSize }: TestimonialProps) {
       <Card className="border-gold/20">
         <CardContent className="p-8">
           <Quote className="h-10 w-10 text-gold opacity-50" />
-          <blockquote className="mt-4 font-serif text-xl italic leading-relaxed text-ink">
+          <blockquote className="mt-4 font-sans text-xl italic leading-relaxed text-ink">
             "{quote}"
           </blockquote>
           <div className="mt-6 flex items-center gap-4">
@@ -41,7 +41,7 @@ export function TestimonialSection() {
     <section className="section-padding bg-white">
       <div className="container-custom">
         <div className="text-center">
-          <h2 className="font-serif text-4xl font-bold text-ink sm:text-5xl">
+          <h2 className="font-sans text-4xl font-bold text-ink sm:text-5xl">
             Trusted by Owners
           </h2>
           <p className="mt-4 text-lg text-slate">

@@ -18,7 +18,7 @@ export default function ConciergePage() {
             <div className="rounded-lg bg-gold/20 p-3">
               <Sparkles className="h-8 w-8 text-gold" />
             </div>
-            <h1 className="font-serif text-5xl font-bold text-white sm:text-6xl">
+            <h1 className="font-sans text-5xl font-bold text-white sm:text-6xl">
               Concierge Services
             </h1>
           </div>
@@ -31,7 +31,7 @@ export default function ConciergePage() {
 
       <section className="section-padding bg-white">
         <div className="container-custom max-w-4xl">
-          <h2 className="font-serif text-3xl font-bold text-ink">
+          <h2 className="font-sans text-3xl font-bold text-ink">
             Effortless Experiences
           </h2>
           <p className="mt-4 text-slate">

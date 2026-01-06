@@ -7,7 +7,7 @@ export function ContactFormStatic() {
   return (
     <Card className="border-gold/20">
       <CardContent className="p-8 text-center">
-        <h3 className="font-serif text-2xl font-bold text-ink">Get in Touch</h3>
+        <h3 className="font-sans text-2xl font-bold text-ink">Get in Touch</h3>
         <p className="mt-4 text-slate">
           Contact us directly via email or phone for the fastest response.
         </p>
@@ -22,11 +22,11 @@ export function ContactFormStatic() {
           </a>
           
           <a
-            href="tel:+447XXXXXXXXX"
+            href="tel:+447950228858"
             className="flex items-center justify-center gap-3 rounded-lg border border-gold bg-gold/5 p-4 transition-all hover:bg-gold/10"
           >
             <Phone className="h-5 w-5 text-gold" />
-            <span className="font-medium text-ink">+44 (0) XXXX XXXXXX</span>
+            <span className="font-medium text-ink">+44 (0) 7950 228858</span>
           </a>
         </div>
 

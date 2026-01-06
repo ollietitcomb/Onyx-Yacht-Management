@@ -64,7 +64,7 @@ export function ValueGrid() {
     <section className="section-padding bg-white">
       <div className="container-custom">
         <div className="text-center">
-          <h2 className="font-serif text-4xl font-bold text-ink sm:text-5xl">
+          <h2 className="font-sans text-4xl font-bold text-ink sm:text-5xl">
             Why Onyx
           </h2>
           <p className="mt-4 text-lg text-slate">

@@ -78,7 +78,7 @@ export default function HomePage() {
       <section className="section-padding bg-fog">
         <div className="container-custom">
           <div className="text-center">
-            <h2 className="font-serif text-4xl font-bold text-ink sm:text-5xl">
+            <h2 className="font-sans text-4xl font-bold text-ink sm:text-5xl">
               Comprehensive Services
             </h2>
             <p className="mt-4 text-lg text-slate">
@@ -113,7 +113,7 @@ export default function HomePage() {
       {/* Final CTA */}
       <section className="section-padding bg-onyx grain-overlay">
         <div className="container-custom relative z-10 text-center">
-          <h2 className="font-serif text-4xl font-bold text-white sm:text-5xl">
+          <h2 className="font-sans text-4xl font-bold text-white sm:text-5xl">
             Ready to elevate your yacht management?
           </h2>
           <p className="mt-4 text-lg text-neutral-300">

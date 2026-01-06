@@ -67,7 +67,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               <Calendar className="h-4 w-4" />
               {formatDate(post.publishedAt)}
             </div>
-            <h1 className="mt-4 font-serif text-4xl font-bold text-ink sm:text-5xl">
+            <h1 className="mt-4 font-sans text-4xl font-bold text-ink sm:text-5xl">
               {post.title}
             </h1>
             <p className="mt-4 text-lg text-slate">{post.summary}</p>

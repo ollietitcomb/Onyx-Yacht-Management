@@ -37,10 +37,13 @@ export function Footer() {
                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold" />
                 <span>South Coast, United Kingdom</span>
               </div>
-              <div className="flex items-center gap-3 text-sm text-slate">
+              <a
+                href="tel:+447950228858"
+                className="flex items-center gap-3 text-sm text-slate link-gold"
+              >
                 <Phone className="h-4 w-4 flex-shrink-0 text-gold" />
-                <span>+44 (0) XXXX XXXXXX</span>
-              </div>
+                <span>+44 (0) 7950 228858</span>
+              </a>
               <div className="flex items-center gap-3 text-sm text-slate">
                 <Mail className="h-4 w-4 flex-shrink-0 text-gold" />
                 <a
@@ -55,7 +58,7 @@ export function Footer() {
 
           {/* Services */}
           <div className="lg:col-span-2 lg:col-start-6">
-            <h3 className="font-serif text-sm font-semibold text-ink">Services</h3>
+            <h3 className="font-sans text-sm font-semibold text-ink">Services</h3>
             <ul className="mt-4 space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
@@ -72,7 +75,7 @@ export function Footer() {
 
           {/* Company */}
           <div className="lg:col-span-2">
-            <h3 className="font-serif text-sm font-semibold text-ink">Company</h3>
+            <h3 className="font-sans text-sm font-semibold text-ink">Company</h3>
             <ul className="mt-4 space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -89,7 +92,7 @@ export function Footer() {
 
           {/* Legal */}
           <div className="lg:col-span-2">
-            <h3 className="font-serif text-sm font-semibold text-ink">Legal</h3>
+            <h3 className="font-sans text-sm font-semibold text-ink">Legal</h3>
             <ul className="mt-4 space-y-2">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>

@@ -80,7 +80,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                 {caseStudy.year}
               </div>
             </div>
-            <h1 className="mt-4 font-serif text-4xl font-bold text-ink sm:text-5xl">
+            <h1 className="mt-4 font-sans text-4xl font-bold text-ink sm:text-5xl">
               {caseStudy.title}
             </h1>
             <p className="mt-4 text-lg text-slate">{caseStudy.summary}</p>

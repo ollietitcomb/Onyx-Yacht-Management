@@ -21,7 +21,7 @@ export function LogosMarquee() {
           {partners.map((partner) => (
             <div
               key={partner}
-              className="font-serif text-lg font-semibold text-ink"
+              className="font-sans text-lg font-semibold text-ink"
             >
               {partner}
             </div>

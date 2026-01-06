@@ -30,7 +30,7 @@ export default function OperationalManagementPage() {
             <div className="rounded-lg bg-gold/20 p-3">
               <FileText className="h-8 w-8 text-gold" />
             </div>
-            <h1 className="font-serif text-5xl font-bold text-white sm:text-6xl">
+            <h1 className="font-sans text-5xl font-bold text-white sm:text-6xl">
               Operational Management
             </h1>
           </div>
@@ -43,7 +43,7 @@ export default function OperationalManagementPage() {
 
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <h2 className="font-serif text-3xl font-bold text-ink">
+          <h2 className="font-sans text-3xl font-bold text-ink">
             Complete Operational Oversight
           </h2>
           <p className="mt-4 max-w-2xl text-slate">

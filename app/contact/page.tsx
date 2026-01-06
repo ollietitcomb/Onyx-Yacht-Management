@@ -15,7 +15,7 @@ export default function ContactPage() {
       <section className="section-padding bg-onyx grain-overlay">
         <div className="container-custom relative z-10">
           <div className="max-w-2xl">
-            <h1 className="font-serif text-5xl font-bold text-white sm:text-6xl">
+            <h1 className="font-sans text-5xl font-bold text-white sm:text-6xl">
               Tell us about your vessel.
             </h1>
             <p className="mt-6 text-lg text-neutral-200">
@@ -33,7 +33,7 @@ export default function ContactPage() {
           <div className="grid gap-12 lg:grid-cols-2">
             {/* Contact Info */}
             <div>
-              <h2 className="font-serif text-3xl font-bold text-ink">
+              <h2 className="font-sans text-3xl font-bold text-ink">
                 Get in Touch
               </h2>
               <p className="mt-4 text-slate">
@@ -63,7 +63,12 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-ink">Phone</h3>
-                    <p className="text-slate">+44 (0) XXXX XXXXXX</p>
+                    <a
+                      href="tel:+447950228858"
+                      className="text-slate link-gold"
+                    >
+                      +44 (0) 7950 228858
+                    </a>
                   </div>
                 </div>
 
@@ -99,7 +104,7 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="rounded-2xl border border-neutral-200 bg-white p-8 shadow-lg">
-              <h2 className="font-serif text-2xl font-bold text-ink">
+              <h2 className="font-sans text-2xl font-bold text-ink">
                 Send us a message
               </h2>
               <p className="mt-2 text-sm text-slate">

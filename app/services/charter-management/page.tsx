@@ -18,7 +18,7 @@ export default function CharterManagementPage() {
             <div className="rounded-lg bg-gold/20 p-3">
               <Ship className="h-8 w-8 text-gold" />
             </div>
-            <h1 className="font-serif text-5xl font-bold text-white sm:text-6xl">
+            <h1 className="font-sans text-5xl font-bold text-white sm:text-6xl">
               Charter Management
             </h1>
           </div>
@@ -46,7 +46,7 @@ export default function CharterManagementPage() {
           </div>
 
           <div className="mt-12">
-            <h2 className="font-serif text-3xl font-bold text-ink">
+            <h2 className="font-sans text-3xl font-bold text-ink">
               What We Offer
             </h2>
             <p className="mt-4 text-slate">

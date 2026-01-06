@@ -22,7 +22,7 @@ export default function OwnerPortalPage() {
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gold/10">
               <Lock className="h-8 w-8 text-gold" />
             </div>
-            <h1 className="mt-6 font-serif text-3xl font-bold text-ink">
+            <h1 className="mt-6 font-sans text-3xl font-bold text-ink">
               Owner Portal
             </h1>
             <div className="mt-4 flex items-center justify-center gap-2 rounded-md border border-gold/30 bg-gold/5 p-3">

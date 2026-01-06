@@ -20,7 +20,7 @@ export default function BlogPage() {
     <>
       <section className="section-padding bg-onyx grain-overlay">
         <div className="container-custom relative z-10">
-          <h1 className="font-serif text-5xl font-bold text-white sm:text-6xl">
+          <h1 className="font-sans text-5xl font-bold text-white sm:text-6xl">
             Blog
           </h1>
           <p className="mt-6 max-w-3xl text-lg text-neutral-200">

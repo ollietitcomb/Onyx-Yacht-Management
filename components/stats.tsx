@@ -59,7 +59,7 @@ export function Stats() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative z-10 text-center"
             >
-              <div className="font-serif text-5xl font-bold text-gold sm:text-6xl">
+              <div className="font-sans text-5xl font-bold text-gold sm:text-6xl">
                 <Counter value={stat.value} />
                 <span>{stat.suffix}</span>
               </div>

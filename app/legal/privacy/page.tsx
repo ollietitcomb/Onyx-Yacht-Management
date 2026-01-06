@@ -9,7 +9,7 @@ export default function PrivacyPage() {
   return (
     <div className="section-padding bg-white">
       <div className="container-custom max-w-4xl">
-        <h1 className="font-serif text-5xl font-bold text-ink">Privacy Policy</h1>
+        <h1 className="font-sans text-5xl font-bold text-ink">Privacy Policy</h1>
         <p className="mt-4 text-sm text-slate">Last updated: {new Date().toLocaleDateString('en-GB')}</p>
 
         <div className="prose prose-neutral mt-8 max-w-none">

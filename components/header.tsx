@@ -16,6 +16,7 @@ import { Logo } from '@/components/logo';
 const navigation = [
   { name: 'Services', href: '/services' },
   { name: 'About', href: '/about' },
+  { name: 'Pricing', href: '/#pricing' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },

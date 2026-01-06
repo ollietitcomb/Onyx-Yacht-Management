@@ -82,7 +82,7 @@ export function generateJsonLd() {
     description:
       'Professional yacht management for UK coastal vessels 37-90ft. Based in the Solent with coverage across the South Coast.',
     areaServed: ['Solent', 'Hampshire', 'South Coast', 'United Kingdom'],
-    telephone: '+44-XXXX-XXXXXX', // Replace with actual number
+    telephone: '+44-7950-228858',
     sameAs: [
       // Add social media URLs when available
       // 'https://www.linkedin.com/company/onyx-yacht-management',
