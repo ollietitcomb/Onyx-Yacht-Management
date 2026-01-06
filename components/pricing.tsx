@@ -11,7 +11,7 @@ const tiers = [
     name: 'Day Boats & Sports Cruisers',
     price: 'From £350',
     period: '/month',
-    description: '37–45ft vessels. Axopar, Sunseeker Portofino, Princess V-Class.',
+    description: '8–12m vessels. Axopar, Saxdor, Finnmaster.',
     features: [
       'Seasonal maintenance planning',
       'Antifouling & winterisation',
@@ -24,7 +24,7 @@ const tiers = [
     name: 'Coastal Cruisers',
     price: 'From £950',
     period: '/month',
-    description: '45–65ft motor yachts. Fairline, Princess, Sunseeker.',
+    description: '12–20m motor yachts. Fairline, Princess, Sunseeker.',
     features: [
       'Everything in Day Boats',
       'Full technical management',
@@ -39,7 +39,7 @@ const tiers = [
     name: 'Premium Yachts',
     price: 'From £2,200',
     period: '/month',
-    description: '65–90ft yachts. Sunseeker 80+, Princess 75+, Fairline Squadron.',
+    description: '20m+ yachts. Sunseeker 80+, Princess 75+, Fairline Squadron.',
     features: [
       'Everything in Coastal Cruisers',
       'Dedicated management contact',
