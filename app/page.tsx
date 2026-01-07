@@ -20,44 +20,48 @@ const services = [
   {
     icon: Wrench,
     title: 'Technical Management',
-    description: 'Planned maintenance, refits, yard periods, and audits.',
+    description: "Hands-on oversight of the yacht's condition, maintenance, and technical requirements.",
     bullets: [
-      'Preventive maintenance scheduling',
-      'Refit project management',
-      'Surveyor coordination',
+      'Planned maintenance and servicing schedules',
+      'Refit coordination and yard periods',
+      'Defect reporting, inspections, and audits',
+      'Surveyor and contractor coordination',
     ],
     href: '/services/technical-management',
   },
   {
     icon: FileText,
     title: 'Operational Management',
-    description: 'Insurance, finance, VAT, and supplier contracts.',
+    description: 'Managing the paperwork, compliance, and commercial details so nothing is missed.',
     bullets: [
-      'Compliance & certification',
-      'Budget management',
-      'Supplier negotiations',
+      'Compliance and certification oversight',
+      'Insurance, VAT, and regulatory support',
+      'Budget tracking and cost control',
+      'Supplier and contractor management',
     ],
     href: '/services/operational-management',
   },
   {
     icon: Users,
-    title: 'Crew Management',
-    description: 'Recruitment, payroll, MLC compliance, and HR.',
+    title: 'Crew & Manning Support (As Required)',
+    description: 'Flexible support for owner-operators or yachts with part-time or delivery crew.',
     bullets: [
-      'Professional crew recruitment',
-      'Payroll & contracts',
-      'Training coordination',
+      'Skipper and crew sourcing when needed',
+      'Contracts and payroll coordination',
+      'Certification and training support',
+      'Relief and delivery crew arrangements',
     ],
     href: '/services/crew-management',
   },
   {
     icon: Sparkles,
-    title: 'Concierge',
-    description: 'Berthing, provisioning, and guest itineraries.',
+    title: 'Owner Support & Concierge',
+    description: "Making ownership simpler, whether you're using the yacht regularly or intermittently.",
     bullets: [
-      'Marina bookings',
-      'Provisioning services',
-      'Guest coordination',
+      'Berthing and marina arrangements',
+      'Maintenance visits and checks',
+      'Provisioning and preparation support',
+      'Usage planning and guest logistics',
     ],
     href: '/services/concierge',
   },
@@ -82,7 +86,7 @@ export default function HomePage() {
               Comprehensive Services
             </h2>
             <p className="mt-4 text-lg text-slate">
-              Full-scope management for every aspect of your vessel.
+              Practical, end-to-end support for yacht ownership and operation.
             </p>
           </div>
 
