@@ -11,27 +11,29 @@ const tiers = [
     name: 'Day Boats & Sports Cruisers',
     price: 'From £350',
     period: '/month',
-    description: '8–12m vessels. Axopar, Saxdor, Finnmaster.',
+    description: '8–12m vessels · Axopar · Saxdor · Finnmaster',
+    benefit: 'Hands-on management for modern day boats, keeping your vessel safe, reliable, and ready to use throughout the season.',
     features: [
-      'Seasonal maintenance planning',
-      'Antifouling & winterisation',
-      'Safety equipment compliance',
-      'Insurance liaison',
-      'Monthly visits',
-      'Quarterly reports',
+      'Seasonal maintenance planning & service coordination',
+      'Antifouling, valeting & winterisation arrangements',
+      'Safety equipment checks & compliance tracking',
+      'Insurance and surveyor liaison',
+      'Monthly physical vessel visits',
+      'Quarterly condition reports with clear recommendations',
     ],
   },
   {
     name: 'Coastal Cruisers',
     price: 'From £950',
     period: '/month',
-    description: '12–20m motor yachts. Fairline, Princess, Sunseeker.',
+    description: '12–20m motor yachts · Fairline · Princess · Sunseeker',
+    benefit: 'Comprehensive management for coastal motor yachts, covering technical oversight, compliance, and day-to-day coordination.',
     features: [
-      'Everything in Day Boats',
+      'Everything in Day Boats & Sports Cruisers',
       'Full technical management',
       'MCA coding support',
-      'Monthly inspections',
-      'Crew coordination (if applicable)',
+      'Monthly vessel inspections',
+      'Crew coordination (where applicable)',
       'Marina & berthing liaison',
     ],
     highlighted: true,
@@ -40,14 +42,15 @@ const tiers = [
     name: 'Premium Yachts',
     price: 'From £2,200',
     period: '/month',
-    description: '20m+ yachts. Sunseeker 80+, Princess 75+, Fairline Squadron.',
+    description: '20m+ yachts · Sunseeker 80+ · Princess 75+ · Fairline Squadron',
+    benefit: 'Dedicated, full-scope management for larger yachts requiring structured oversight and experienced coordination.',
     features: [
       'Everything in Coastal Cruisers',
       'Dedicated management contact',
-      'Refit project oversight',
+      'Crew management & operational coordination',
+      'Refit & yard period oversight',
       'Charter management (optional)',
-      'Real-time budget tracking',
-      'Med season coordination',
+      'Budget tracking & Med season coordination',
     ],
   },
 ];
@@ -75,13 +78,13 @@ export function Pricing() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card
-                className={`h-full ${
+                className={`flex h-full flex-col ${
                   tier.highlighted
-                    ? 'border-gold shadow-2xl scale-105'
+                    ? 'border-gold shadow-2xl'
                     : 'hover:border-gold/50'
                 } transition-all duration-200`}
               >
-                <CardHeader>
+                <CardHeader className="flex-shrink-0">
                   <CardTitle className="text-2xl">{tier.name}</CardTitle>
                   <div className="mt-4">
                     <span className="font-sans text-4xl font-bold text-gold">
@@ -90,9 +93,12 @@ export function Pricing() {
                     <span className="text-slate">{tier.period}</span>
                   </div>
                   <p className="mt-2 text-sm text-slate">{tier.description}</p>
+                  {tier.benefit && (
+                    <p className="mt-3 text-sm text-slate leading-relaxed">{tier.benefit}</p>
+                  )}
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  <ul className="space-y-3">
+                <CardContent className="flex flex-1 flex-col space-y-6">
+                  <ul className="flex-1 space-y-3">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
                         <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold" />
@@ -103,7 +109,7 @@ export function Pricing() {
                   <Button
                     asChild
                     variant={tier.highlighted ? 'gold' : 'outline'}
-                    className="w-full"
+                    className="mt-auto w-full"
                   >
                     <Link href="/contact">Request Quote</Link>
                   </Button>
