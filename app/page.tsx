@@ -14,56 +14,81 @@ import {
   Users,
   Sparkles,
   Ship,
+  MessageSquare,
 } from 'lucide-react';
 
 const services = [
   {
     icon: Wrench,
     title: 'Technical Management',
-    description: "Hands-on oversight of the yacht's condition, maintenance, and technical requirements.",
+    description: 'Oversight and coordination to keep your vessel reliable and well maintained.',
     bullets: [
-      'Planned maintenance and servicing schedules',
-      'Refit coordination and yard periods',
-      'Defect reporting, inspections, and audits',
-      'Surveyor and contractor coordination',
+      'Planned maintenance scheduling & coordination',
+      'Refit and yard period oversight',
+      'Safety equipment checks & compliance support',
+      'Surveyor and specialist liaison',
     ],
     href: '/services/technical-management',
   },
   {
     icon: FileText,
-    title: 'Operational Management',
-    description: 'Managing the paperwork, compliance, and commercial details so nothing is missed.',
+    title: 'Operational Support',
+    description: 'Clear, efficient coordination of the key operational elements that matter most.',
     bullets: [
-      'Compliance and certification oversight',
-      'Insurance, VAT, and regulatory support',
-      'Budget tracking and cost control',
-      'Supplier and contractor management',
+      'Insurance liaison and claims support',
+      'Budget planning & cost visibility',
+      'Supplier coordination and oversight',
+      'Maintenance documentation & reporting',
     ],
     href: '/services/operational-management',
   },
   {
     icon: Users,
-    title: 'Crew & Manning Support (As Required)',
-    description: 'Flexible support for owner-operators or yachts with part-time or delivery crew.',
+    title: 'Crew Coordination',
+    description: 'Light-touch crew support focused on operations, not HR.',
     bullets: [
-      'Skipper and crew sourcing when needed',
-      'Contracts and payroll coordination',
-      'Certification and training support',
-      'Relief and delivery crew arrangements',
+      'Crew scheduling and day-to-day coordination',
+      'Relief crew sourcing (where required)',
+      'Training and certification tracking',
+      'Operational support for owner-run vessels',
     ],
     href: '/services/crew-management',
   },
   {
     icon: Sparkles,
-    title: 'Owner Support & Concierge',
-    description: "Making ownership simpler, whether you're using the yacht regularly or intermittently.",
+    title: 'Vessel Logistics',
+    description: 'Practical support for berthing, movements, and general logistics.',
     bullets: [
-      'Berthing and marina arrangements',
-      'Maintenance visits and checks',
-      'Provisioning and preparation support',
-      'Usage planning and guest logistics',
+      'Marina and berth coordination',
+      'Fuel, services, and supplier access',
+      'Pre-arrival and pre-departure preparation',
+      'Local operational support',
     ],
     href: '/services/concierge',
+  },
+  {
+    icon: Ship,
+    title: 'Charter Support (Optional)',
+    description: 'Charter-ready oversight without full charter management.',
+    bullets: [
+      'Charter compliance coordination',
+      'Liaison with charter managers and agents',
+      'Pre- and post-charter condition checks',
+      'Maintenance and readiness support',
+    ],
+    href: '/services/charter-management',
+  },
+  {
+    icon: MessageSquare,
+    title: 'Owner Support & Advisory',
+    description: 'Clear guidance and decision support whenever you need it.',
+    bullets: [
+      'Independent advice on maintenance and upgrades',
+      'Second-opinion reviews on quotes and proposed works',
+      'Purchase, pre-survey, and handover support',
+      'Ongoing owner guidance without obligation',
+    ],
+    href: '/contact',
   },
 ];
 
@@ -83,14 +108,14 @@ export default function HomePage() {
         <div className="container-custom">
           <div className="text-center">
             <h2 className="font-sans text-4xl font-bold text-ink sm:text-5xl">
-              Comprehensive Services
+              Full-Scope Yacht Management
             </h2>
             <p className="mt-4 text-lg text-slate">
-              Practical, end-to-end support for yacht ownership and operation.
+              Practical, proactive yacht management focused on keeping your vessel safe, maintained, and ready to use — without unnecessary complexity or admin overhead.
             </p>
           </div>
 
-          <div className="mt-16 grid gap-8 md:grid-cols-2">
+          <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <ServiceCard key={service.title} {...service} />
             ))}
