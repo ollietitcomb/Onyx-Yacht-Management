@@ -192,7 +192,7 @@ export function ContactForm() {
       {submitStatus === 'success' && (
         <div className="rounded-md bg-green-50 border border-green-200 p-4">
           <p className="text-sm text-green-800">
-            Thanks—We'll be in touch within one business day.
+            Thanks. We'll be in touch within one business day.
           </p>
         </div>
       )}

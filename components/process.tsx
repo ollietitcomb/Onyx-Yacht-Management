@@ -34,10 +34,13 @@ export function Process() {
     <section className="section-padding bg-fog">
       <div className="container-custom">
         <div className="text-center">
-          <h2 className="font-sans text-4xl font-bold text-ink sm:text-5xl">
-            Our Approach
+          <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-400">
+            Our approach
+          </p>
+          <h2 className="mt-3 font-sans text-[38px] font-light tracking-[-0.02em] text-ink sm:text-5xl">
+            A proven process
           </h2>
-          <p className="mt-4 text-lg text-slate">
+          <p className="mt-4 text-lg font-light text-slate">
             A proven process for comprehensive yacht management.
           </p>
         </div>
@@ -54,16 +57,16 @@ export function Process() {
             >
               {/* Connector line */}
               {index < steps.length - 1 && (
-                <div className="absolute left-1/2 top-12 hidden h-1 w-full bg-gradient-to-r from-gold to-gold/20 lg:block"></div>
+                <div className="absolute left-1/2 top-8 hidden h-px w-full bg-neutral-200 lg:block"></div>
               )}
 
               <div className="relative flex flex-col items-center text-center">
-                <div className="flex h-24 w-24 items-center justify-center rounded-full border-2 border-gold bg-white shadow-lg">
-                  <span className="font-sans text-3xl font-bold text-gold">
+                <div className="flex h-16 w-16 items-center justify-center bg-white">
+                  <span className="font-sans text-3xl font-light text-neutral-300">
                     {step.number}
                   </span>
                 </div>
-                <h3 className="mt-6 font-sans text-2xl font-semibold text-ink">
+                <h3 className="mt-6 font-sans text-[17px] font-medium text-ink">
                   {step.title}
                 </h3>
                 <p className="mt-3 text-sm text-slate">{step.description}</p>

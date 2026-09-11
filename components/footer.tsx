@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin } from 'lucide-react';
 import { Logo } from '@/components/logo';
 
 const footerLinks = {
@@ -14,6 +13,7 @@ const footerLinks = {
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Enquire', href: '/contact' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/legal/privacy' },
@@ -23,48 +23,41 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-neutral-200 bg-white">
-      <div className="container-custom py-12 lg:py-16">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
-          {/* Brand Column */}
-          <div className="lg:col-span-4">
+    <footer className="border-t-[0.5px] border-neutral-200 bg-[#f7f7f5]">
+      <div className="mx-auto max-w-7xl px-4 py-12 md:px-8 md:py-16">
+        <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
+          <div className="col-span-2 md:col-span-1">
             <Logo />
-            <p className="mt-4 max-w-xs text-sm text-slate">
-              Discreet, full-scope yacht management across the UK and the Mediterranean.
+            <p className="mt-4 max-w-xs text-[14px] font-light leading-relaxed text-slate">
+              Discreet, full-scope yacht management across the UK and the
+              Mediterranean.
             </p>
-            <div className="mt-6 space-y-3">
-              <div className="flex items-start gap-3 text-sm text-slate">
-                <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold" />
-                <span>South Coast, United Kingdom</span>
-              </div>
+            <div className="mt-6 space-y-2 text-[14px] font-light text-slate">
               <a
                 href="tel:+447950228858"
-                className="flex items-center gap-3 text-sm text-slate link-gold"
+                className="block transition-colors hover:text-ink"
               >
-                <Phone className="h-4 w-4 flex-shrink-0 text-gold" />
-                <span>+44 (0) 7950 228858</span>
+                +44 (0) 7950 228858
               </a>
-              <div className="flex items-center gap-3 text-sm text-slate">
-                <Mail className="h-4 w-4 flex-shrink-0 text-gold" />
-                <a
-                  href="mailto:info@onyxyachtmanagement.com"
-                  className="link-gold"
-                >
-                  info@onyxyachtmanagement.com
-                </a>
-              </div>
+              <a
+                href="mailto:info@onyxyachtmanagement.com"
+                className="block transition-colors hover:text-ink"
+              >
+                info@onyxyachtmanagement.com
+              </a>
             </div>
           </div>
 
-          {/* Services */}
-          <div className="lg:col-span-2 lg:col-start-6">
-            <h3 className="font-sans text-sm font-semibold text-ink">Services</h3>
-            <ul className="mt-4 space-y-2">
+          <div>
+            <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-neutral-400">
+              Services
+            </p>
+            <ul className="mt-4 space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-slate link-gold focus-ring rounded-sm"
+                    className="text-[13px] font-light text-slate transition-colors hover:text-ink"
                   >
                     {link.name}
                   </Link>
@@ -73,15 +66,16 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
-          <div className="lg:col-span-2">
-            <h3 className="font-sans text-sm font-semibold text-ink">Company</h3>
-            <ul className="mt-4 space-y-2">
+          <div>
+            <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-neutral-400">
+              Company
+            </p>
+            <ul className="mt-4 space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-slate link-gold focus-ring rounded-sm"
+                    className="text-[13px] font-light text-slate transition-colors hover:text-ink"
                   >
                     {link.name}
                   </Link>
@@ -90,15 +84,16 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
-          <div className="lg:col-span-2">
-            <h3 className="font-sans text-sm font-semibold text-ink">Legal</h3>
-            <ul className="mt-4 space-y-2">
+          <div>
+            <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-neutral-400">
+              Legal
+            </p>
+            <ul className="mt-4 space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-slate link-gold focus-ring rounded-sm"
+                    className="text-[13px] font-light text-slate transition-colors hover:text-ink"
                   >
                     {link.name}
                   </Link>
@@ -108,10 +103,13 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-neutral-200 pt-8">
-          <p className="text-center text-sm text-slate">
+        <div className="mt-16 flex flex-col gap-3 border-t border-neutral-200 pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-[12px] text-neutral-400">
             &copy; {new Date().getFullYear()} Onyx Yacht Management. All rights
             reserved.
+          </p>
+          <p className="text-[12px] text-neutral-300">
+            onyxyachtmanagement.com
           </p>
         </div>
       </div>

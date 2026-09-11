@@ -60,10 +60,13 @@ export function Pricing() {
     <section id="pricing" className="section-padding bg-fog">
       <div className="container-custom">
         <div className="text-center">
-          <h2 className="font-sans text-4xl font-bold text-ink sm:text-5xl">
-            Transparent Retainers
+          <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-400">
+            Pricing
+          </p>
+          <h2 className="mt-3 font-sans text-[38px] font-light tracking-[-0.02em] text-ink sm:text-5xl">
+            Transparent retainers
           </h2>
-          <p className="mt-4 text-lg text-slate">
+          <p className="mt-4 text-lg font-light text-slate">
             Clear pricing. No surprises. Bespoke packages available.
           </p>
         </div>
@@ -79,15 +82,13 @@ export function Pricing() {
             >
               <Card
                 className={`flex h-full flex-col ${
-                  tier.highlighted
-                    ? 'border-gold shadow-2xl'
-                    : 'hover:border-gold/50'
-                } transition-all duration-200`}
+                  tier.highlighted ? 'border-ink' : ''
+                }`}
               >
                 <CardHeader className="flex-shrink-0">
                   <CardTitle className="text-2xl">{tier.name}</CardTitle>
                   <div className="mt-4">
-                    <span className="font-sans text-4xl font-bold text-gold">
+                    <span className="font-sans text-4xl font-light tracking-[-0.02em] text-ink">
                       {tier.price}
                     </span>
                     <span className="text-slate">{tier.period}</span>
@@ -101,7 +102,7 @@ export function Pricing() {
                   <ul className="flex-1 space-y-3">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold" />
+                        <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-ink" />
                         <span className="text-sm text-slate">{feature}</span>
                       </li>
                     ))}

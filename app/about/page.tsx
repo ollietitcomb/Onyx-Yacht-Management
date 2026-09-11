@@ -85,7 +85,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   Our clients are weekend cruisers, family boaters, and occasional charterers.
-                  Axopars, Sunseekers, Princess yachts, Fairlines—vessels that spend most of
+                  Axopars, Sunseekers, Princess yachts, Fairlines: vessels that spend most of
                   the year on a mooring or in a marina, not at sea with permanent crew.
                 </p>
                 <p>

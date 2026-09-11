@@ -96,8 +96,8 @@ export default function HomePage() {
   return (
     <>
       <Hero
-        headline="Professional management for UK coastal vessels."
-        subcopy="From day boats to yachts—rigorous maintenance, transparent costs, and expert support across the Solent, South Coast, and beyond."
+        headline="Professional management for UK coastal vessels"
+        subcopy="From day boats to yachts - rigorous maintenance, transparent costs, and expert support across the Solent, South Coast, and beyond."
         primaryCta={{ text: 'Request a consultation', href: '/contact' }}
         secondaryCta={{ text: 'Explore services', href: '/services' }}
       />
@@ -107,11 +107,14 @@ export default function HomePage() {
       <section className="section-padding bg-fog">
         <div className="container-custom">
           <div className="text-center">
-            <h2 className="font-sans text-4xl font-bold text-ink sm:text-5xl">
-              Full-Scope Yacht Management
+            <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-400">
+              Services
+            </p>
+            <h2 className="mt-3 font-sans text-[38px] font-light tracking-[-0.02em] text-ink sm:text-5xl">
+              Full-scope yacht management
             </h2>
-            <p className="mt-4 text-lg text-slate">
-              Practical, proactive yacht management focused on keeping your vessel safe, maintained, and ready to use — without unnecessary complexity or admin overhead.
+            <p className="mt-4 text-lg font-light text-slate">
+              Practical, proactive yacht management focused on keeping your vessel safe, maintained, and ready to use - without unnecessary complexity or admin overhead.
             </p>
           </div>
 
@@ -142,15 +145,20 @@ export default function HomePage() {
       {/* Final CTA */}
       <section className="section-padding bg-onyx grain-overlay">
         <div className="container-custom relative z-10 text-center">
-          <h2 className="font-sans text-4xl font-bold text-white sm:text-5xl">
+          <h2 className="font-sans text-[38px] font-light tracking-[-0.02em] text-white sm:text-5xl">
             Ready to elevate your yacht management?
           </h2>
-          <p className="mt-4 text-lg text-neutral-300">
+          <p className="mt-4 text-lg font-light text-white/70">
             Schedule a consultation and discover the Onyx difference.
           </p>
           <div className="mt-8">
-            <Button asChild size="lg" variant="gold">
-              <Link href="/contact">Get in Touch</Link>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-ink"
+            >
+              <Link href="/contact">Get in touch</Link>
             </Button>
           </div>
         </div>

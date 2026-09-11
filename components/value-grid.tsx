@@ -35,7 +35,7 @@ const values = [
   {
     icon: Leaf,
     title: 'Seasonal planning',
-    description: 'Winter lay-up, spring commissioning, summer support—all covered.',
+    description: 'Winter lay-up, spring commissioning, summer support, all covered.',
   },
   {
     icon: CheckCircle2,
@@ -64,11 +64,14 @@ export function ValueGrid() {
     <section className="section-padding bg-white">
       <div className="container-custom">
         <div className="text-center">
-          <h2 className="font-sans text-4xl font-bold text-ink sm:text-5xl">
+          <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-400">
             Why Onyx
+          </p>
+          <h2 className="mt-3 font-sans text-[38px] font-light tracking-[-0.02em] text-ink sm:text-5xl">
+            Built on rigorous standards
           </h2>
-          <p className="mt-4 text-lg text-slate">
-            Built on rigorous standards and decades of expertise.
+          <p className="mt-4 text-lg font-light text-slate">
+            Decades of expertise, applied to the vessels you actually use.
           </p>
         </div>
 
@@ -81,10 +84,10 @@ export function ValueGrid() {
         >
           {values.map((value) => (
             <motion.div key={value.title} variants={item}>
-              <Card className="h-full transition-all hover:shadow-xl hover:border-gold">
+              <Card className="h-full">
                 <CardHeader>
-                  <div className="mb-4 inline-flex rounded-lg bg-gold/10 p-3">
-                    <value.icon className="h-6 w-6 text-gold" />
+                  <div className="mb-4 inline-flex rounded-sm border-[0.5px] border-neutral-200 p-3">
+                    <value.icon className="h-6 w-6 text-ink" />
                   </div>
                   <CardTitle className="text-xl">{value.title}</CardTitle>
                 </CardHeader>

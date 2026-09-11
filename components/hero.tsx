@@ -3,8 +3,6 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
 
 interface HeroProps {
   headline: string;
@@ -22,9 +20,8 @@ export function Hero({
   backgroundImage = '/images/hero-yacht.jpg',
 }: HeroProps) {
   return (
-    <section className="relative min-h-[90vh] flex items-center grain-overlay overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+    <section className="relative overflow-hidden">
+      <div className="absolute inset-0">
         <Image
           src={backgroundImage}
           alt="Luxury yacht"
@@ -32,87 +29,45 @@ export function Hero({
           className="object-cover"
           priority
           quality={90}
-          style={{ filter: 'brightness(0.4)' }}
+          sizes="100vw"
         />
-        <div className="absolute inset-0 bg-onyx/70"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-onyx/99 via-onyx/98 to-onyx/95"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.58)_0%,rgba(0,0,0,0.22)_100%)]" />
       </div>
 
-      {/* Content */}
-      <div className="container-custom relative z-10">
-        <div className="max-w-3xl">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="font-sans text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl"
-          >
+      <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-8 md:py-28 lg:py-32">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="max-w-xl"
+        >
+          <p className="mb-5 text-[11px] font-medium uppercase tracking-[0.28em] text-white/70">
+            Yacht management
+          </p>
+          <h1 className="text-[38px] font-light leading-[1.12] tracking-[-0.02em] text-white md:text-[52px] lg:text-[58px]">
             {headline}
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 text-lg text-neutral-200 sm:text-xl"
-          >
+          </h1>
+          <p className="mt-6 max-w-md text-[16px] font-light leading-relaxed text-white/80 md:text-[17px]">
             {subcopy}
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-10 flex flex-col gap-4 sm:flex-row"
-          >
-            <Button
-              asChild
-              size="lg"
-              variant="gold"
-              className="group"
+          </p>
+          <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+            <Link
+              href={primaryCta.href}
+              className="inline-flex items-center justify-center border border-white bg-white px-5 py-2.5 text-[12px] font-medium uppercase tracking-[0.1em] text-ink transition-colors duration-150 hover:bg-transparent hover:text-white"
             >
-              <Link href={primaryCta.href}>
-                {primaryCta.text}
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Button>
-
+              {primaryCta.text}
+            </Link>
             {secondaryCta && (
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-onyx"
+              <Link
+                href={secondaryCta.href}
+                className="inline-flex items-center justify-center border border-white/80 bg-transparent px-5 py-2.5 text-[12px] font-medium uppercase tracking-[0.1em] text-white transition-colors duration-150 hover:bg-white hover:text-ink"
               >
-                <Link href={secondaryCta.href}>{secondaryCta.text}</Link>
-              </Button>
+                {secondaryCta.text}
+              </Link>
             )}
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
-      >
-        <div className="flex flex-col items-center gap-2 text-white/60">
-          <span className="text-xs uppercase tracking-wider">Scroll</span>
-          <div className="h-12 w-6 rounded-full border-2 border-white/30 p-1">
-            <motion.div
-              animate={{ y: [0, 16, 0] }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: 'loop',
-              }}
-              className="h-2 w-2 rounded-full bg-white/60"
-            />
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 }
