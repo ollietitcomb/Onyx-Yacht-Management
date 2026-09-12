@@ -1,6 +1,4 @@
-// Email service placeholder
-// To use Resend: npm install resend
-// To use AWS SES: npm install @aws-sdk/client-ses
+import { Resend } from 'resend';
 
 export type ContactFormData = {
   name: string;
@@ -12,40 +10,82 @@ export type ContactFormData = {
   message: string;
 };
 
+const TO_EMAIL = 'info@onyxyachtmanagement.com';
+const FROM_EMAIL = 'Onyx Yacht Management <noreply@onyxyachtmanagement.com>';
+
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 export async function sendContactEmail(data: ContactFormData): Promise<boolean> {
-  // For now, just log to console
-  console.log('📧 Contact form submission:', data);
-
-  // TODO: Replace with actual email service
-  // Example with Resend:
-  /*
-  import { Resend } from 'resend';
-  const resend = new Resend(process.env.RESEND_API_KEY);
-
-  try {
-    await resend.emails.send({
-      from: 'Onyx Yacht Management <noreply@onyxyachtmanagement.com>',
-      to: process.env.CONTACT_EMAIL || 'info@onyxyachtmanagement.com',
-      subject: `New Contact Form Submission from ${data.name}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${data.name}</p>
-        <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Phone:</strong> ${data.phone || 'Not provided'}</p>
-        <p><strong>Vessel Type:</strong> ${data.vesselType || 'Not provided'}</p>
-        <p><strong>LOA:</strong> ${data.loa || 'Not provided'}</p>
-        <p><strong>Home Port:</strong> ${data.homePort || 'Not provided'}</p>
-        <p><strong>Message:</strong></p>
-        <p>${data.message}</p>
-      `,
-    });
-    return true;
-  } catch (error) {
-    console.error('Failed to send email:', error);
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.error('RESEND_API_KEY is not set; contact form cannot send.');
     return false;
   }
-  */
 
-  // Simulate success for demo
-  return true;
+  const rows: Array<[string, string]> = [
+    ['Name', data.name],
+    ['Email', data.email],
+    ['Phone', data.phone || 'Not provided'],
+    ['Vessel type', data.vesselType || 'Not provided'],
+    ['LOA', data.loa || 'Not provided'],
+    ['Home port', data.homePort || 'Not provided'],
+    ['Message', data.message],
+  ];
+
+  const html = `
+    <div style="font-family: Arial, Helvetica, sans-serif; color: #111;">
+      <h2 style="font-weight: 400;">New contact form submission</h2>
+      <table style="border-collapse: collapse;">
+        ${rows
+          .map(
+            ([label, value]) => `
+          <tr>
+            <td style="padding: 6px 16px 6px 0; color: #666; vertical-align: top;">${escapeHtml(
+              label
+            )}</td>
+            <td style="padding: 6px 0; white-space: pre-wrap;">${escapeHtml(
+              value
+            )}</td>
+          </tr>`
+          )
+          .join('')}
+      </table>
+    </div>
+  `;
+
+  const text = rows.map(([label, value]) => `${label}: ${value}`).join('\n');
+
+  try {
+    const resend = new Resend(apiKey);
+    const { data: sendData, error } = await resend.emails.send({
+      from: FROM_EMAIL,
+      to: [TO_EMAIL],
+      replyTo: data.email,
+      subject: `Contact form - ${data.name}`,
+      html,
+      text,
+    });
+
+    if (error) {
+      console.error('Resend contact email failed:', error);
+      return false;
+    }
+
+    if (!sendData?.id) {
+      console.error('Resend contact email returned no id:', { sendData, error });
+      return false;
+    }
+
+    return true;
+  } catch (error) {
+    console.error('Resend contact email error:', error);
+    return false;
+  }
 }

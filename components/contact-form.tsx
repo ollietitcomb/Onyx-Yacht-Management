@@ -52,7 +52,7 @@ export function ContactForm() {
     try {
       const result = await submitContactForm(data);
 
-      if (result.success) {
+      if (result?.success === true) {
         setSubmitStatus('success');
         reset();
       } else {

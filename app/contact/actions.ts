@@ -36,8 +36,7 @@ export async function submitContactForm(data: unknown) {
       return { success: false, error: 'Too many requests. Please try again later.' };
     }
 
-    // Send email
-    await sendContactEmail({
+    const sent = await sendContactEmail({
       name: validated.name,
       email: validated.email,
       phone: validated.phone,
@@ -46,6 +45,10 @@ export async function submitContactForm(data: unknown) {
       homePort: validated.homePort,
       message: validated.message,
     });
+
+    if (!sent) {
+      return { success: false, error: 'Failed to send message' };
+    }
 
     return { success: true };
   } catch (error) {
